@@ -57,12 +57,12 @@
             <a href="#"><img src="./img/social-3.png" alt="Logo twitter"></a> -->
         </nav>
         <div>
-            <form action="http://meusite.com.br/scripts/login.php" method="" onsubmit="return false">
+            <form action="index.html" method="GET" onsubmit="return true">
                 <fieldset>
                     <legend>Contato</legend>
                     <div>
                         <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" placeholder="Email">
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Email" >
                     </div>
                     <div>
                         <label for="idNm">Nome</label>
@@ -70,7 +70,27 @@
                     </div>
                     <div>
                         <label for="idGrava">Gravar Dados</label>
-                        <input type="checkbox" name="chbGrava" id="idGrava" required>
+                        <input type="checkbox" name="chbGrava" id="idGrava" value="gravar">
+                    </div>
+                    <!-- <div>
+                        <fieldset>
+                            <legend>Genêro</legend>
+                            <label for="idRdbM">Masculino</label>
+                            <input type="radio" name="rdb" id="idRdbM" value="m" checked="checked">
+                            <label for="idRdbF">Feminino</label>
+                            <input type="radio" name="rdb" id="idRdbF" value="f">
+                            <label for="idRdbO">Outros</label>
+                            <input type="radio" name="rdb" id="idRdbO" value="o">
+                        </fieldset>
+                    </div> -->
+                    <div>
+                        <label for="idGenero">Genêro</label>
+                        <select name="selGenero" id="idGenero">
+                            <option selected="selected" value="-">Selecione uma opção</option>
+                            <option value="m">Masculino</option>
+                            <option value="f">Feminino</option>
+                            <option value="o">Oustros</option>
+                        </select>
                     </div>
                     <div>
                         <input type="submit" value="Enviar">
