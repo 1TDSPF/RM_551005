@@ -1,4 +1,4 @@
-//DIFERENÇA ENTRE LET/VAR/CONST
+/*//DIFERENÇA ENTRE LET/VAR/CONST
 // var nome = "Kayque";
 // if(nome == "Kayque"){
 //     let nome = "Denise";
@@ -36,4 +36,11 @@ const h2Element = document.getElementById("meu-tit");
 
 h2Element.addEventListener("click", function(){
     this.setAttribute("style", `background-color:#ff0000;color:#fff;`);
-});
+});*/
+
+//Declarando um array
+let frutas = ["maçã","laranja","banana","uva","kiwi","caqui"];
+console.log(frutas);
+//Para verificar o tamanho do array utilizamos a propriedade length
+console.log("Tamanho do Array " + frutas.length);
+console.log("Pegando um dos itens  do Array: " + frutas[3]);
