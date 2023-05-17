@@ -21,37 +21,46 @@ console.log(listaDeUsuarios);
 
 addEventListener("click", (evt)=>{
     
+    const inputEmail = document.querySelector("#idEmail");
+    const inputPass = document.querySelector("#idPass");
+    
     if(evt.target.id == "btnSubmit"){
-        
-        const inputEmail = document.querySelector("#idEmail");
-        const inputPass = document.querySelector("#idPass");
 
         try {
             
             listaDeUsuarios.forEach((usuario)=>{
-    
+     
                 if(inputEmail.value == usuario.usuarioEmail && inputPass.value == usuario.usuarioSenha){
                     throw "VALIDADO";
                 }
             });
 
-            throw "NÃO VALIDADO"
+            throw "NÃO VALIDADO";
 
         } catch (msg) {
-
-            const msgStatus = document.querySelector("msgStatus")
-
+            const msgStatus = document.querySelector("#msgStatus");
+            
             if(msg == "VALIDADO"){
                 msgStatus.setAttribute("style","color:#00ff00;");
                 msgStatus.innerHTML = "<span><strong>Login efetuado com Sucesso!</strong></span>";
-            }else {
+            }else{
                 msgStatus.setAttribute("style","color:#ff0000;");
-                msgStatus.innerHTML = "<span><strong>Senha ou nome de usuario invalido!</strong></span>";
+                msgStatus.innerHTML = "<span><strong>Senha ou nome de usuário inválidos!</strong></span>";
             }
+            
         }
 
-
-
-
+    }else if(evt.target.className== "fa fa-eye" || evt.target.className== "fa fa-eye-slash" ){
+        if(inputPass.getAttribute("type") == "password"){
+            inputPass.setAttribute("type","text");
+            evt.target.setAttribute("class", "fa fa-eye-slash");
+        }else{
+            inputPass.setAttribute("type","password");
+            evt.target.setAttribute("class", "fa fa-eye")
+        }
     }
+        
+
+
+
 });
