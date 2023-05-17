@@ -14,10 +14,37 @@ const usuario2 = {
 }
 
 //CRIAR UMA LISTA DE OBJETOS
-let listaDeUsuarios = [];
-listaDeUsuarios.push(usuario1);
-listaDeUsuarios.push(usuario2);
-console.log(listaDeUsuarios);
+let listaDeUsuarios = [
+    {
+        nomeCompleto : "Jaú da Selva" ,
+        usuarioEmail : "jau@emal.com",
+        usuarioSenha: "123456"
+    },
+    {
+        nomeCompleto : "Paulo das Couves" ,
+        usuarioEmail : "paulo@emal.com",
+        usuarioSenha: "123456"
+    },
+    {
+        nomeCompleto : "José da Silva" ,
+        usuarioEmail : "jose@emal.com",
+        usuarioSenha: "123456"
+    },
+    {
+        nomeCompleto : "Maria do Socorro" ,
+        usuarioEmail : "maria@emal.com",
+        usuarioSenha: "123456"
+    },
+    {
+        nomeCompleto : "André da Silva" ,
+        usuarioEmail : "andre@emal.com",
+        usuarioSenha: "123456"
+    },
+];
+
+
+localStorage.setItem("listaUser", JSON.stringify(listaDeUsuarios);
+
 
 addEventListener("click", (evt)=>{
     
